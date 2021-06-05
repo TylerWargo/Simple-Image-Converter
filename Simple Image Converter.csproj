@@ -5,6 +5,12 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <RootNamespace>Simple_Image_Converter</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
+    <Authors>Tyler Wargo</Authors>
+    <Company />
+    <Description>A simple image conversion program written in C#.</Description>
+    <Copyright>MIT</Copyright>
+    <PackageProjectUrl>https://github.com/TylerWargo/Simple-Image-Converter</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/TylerWargo/Simple-Image-Converter</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

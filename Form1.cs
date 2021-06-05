@@ -26,7 +26,11 @@ namespace Simple_Image_Converter
         private void Help_Click(object sender, EventArgs e)
         {
             string helpTarget = "https://github.com/TylerWargo/Simple-Image-Converter";
-            Process.Start(helpTarget);
+            Process.Start(new ProcessStartInfo(helpTarget) 
+            { 
+                UseShellExecute = true 
+            });
+
         }
     }
 }
