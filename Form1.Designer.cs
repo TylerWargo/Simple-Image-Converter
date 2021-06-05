@@ -33,6 +33,7 @@ namespace Simple_Image_Converter
             this.ToolBarMenuStrip = new System.Windows.Forms.MenuStrip();
             this.File = new System.Windows.Forms.ToolStripMenuItem();
             this.Import = new System.Windows.Forms.ToolStripMenuItem();
+            this.Options = new System.Windows.Forms.ToolStripMenuItem();
             this.Help = new System.Windows.Forms.ToolStripMenuItem();
             this.ImportDialoge = new System.Windows.Forms.OpenFileDialog();
             this.ToolBarMenuStrip.SuspendLayout();
@@ -60,7 +61,8 @@ namespace Simple_Image_Converter
             // File
             // 
             this.File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Import});
+            this.Import,
+            this.Options});
             this.File.Name = "File";
             this.File.Size = new System.Drawing.Size(37, 20);
             this.File.Text = "File";
@@ -68,9 +70,15 @@ namespace Simple_Image_Converter
             // Import
             // 
             this.Import.Name = "Import";
-            this.Import.Size = new System.Drawing.Size(110, 22);
+            this.Import.Size = new System.Drawing.Size(180, 22);
             this.Import.Text = "Import";
             this.Import.Click += new System.EventHandler(this.Import_Click);
+            // 
+            // Options
+            // 
+            this.Options.Name = "Options";
+            this.Options.Size = new System.Drawing.Size(180, 22);
+            this.Options.Text = "Options";
             // 
             // Help
             // 
@@ -82,6 +90,8 @@ namespace Simple_Image_Converter
             // ImportDialoge
             // 
             this.ImportDialoge.FileName = "importFileDialogue";
+            this.ImportDialoge.Filter = "Image files (*.png, *.jpg, *.jpeg, *.jpe, *.jfif) | *.png; *.jpg; *.jpeg; *.jpe; " +
+    "*.jfif";
             this.ImportDialoge.Multiselect = true;
             this.ImportDialoge.Title = "Testing File Dialog";
             // 
@@ -112,6 +122,7 @@ namespace Simple_Image_Converter
         private System.Windows.Forms.ToolStripMenuItem Import;
         private System.Windows.Forms.ToolStripMenuItem Help;
         private System.Windows.Forms.OpenFileDialog ImportDialoge;
+        private System.Windows.Forms.ToolStripMenuItem Options;
     }
 }
 

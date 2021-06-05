@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Simple_Image_Converter
 {
@@ -20,11 +21,12 @@ namespace Simple_Image_Converter
         private void Import_Click(object sender, EventArgs e)
         {
             ImportDialoge.ShowDialog();
-            ImportDialoge.Filter = "Image files (*.png, *.jpg, *.jpeg, *.jpe, *.jfif) | *.png; *.jpg; *.jpeg; *.jpe; *.jfif";
         }
 
         private void Help_Click(object sender, EventArgs e)
         {
+            string helpTarget = "https://github.com/TylerWargo/Simple-Image-Converter";
+            Process.Start(helpTarget);
         }
     }
 }
