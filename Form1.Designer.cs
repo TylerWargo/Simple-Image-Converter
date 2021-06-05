@@ -29,7 +29,7 @@ namespace Simple_Image_Converter
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.FileListView = new System.Windows.Forms.ListView();
             this.ToolBarMenuStrip = new System.Windows.Forms.MenuStrip();
             this.File = new System.Windows.Forms.ToolStripMenuItem();
             this.Import = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,14 +39,17 @@ namespace Simple_Image_Converter
             this.ToolBarMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // listView1
+            // FileListView
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 27);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(346, 243);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.FileListView.AllowDrop = true;
+            this.FileListView.HideSelection = false;
+            this.FileListView.Location = new System.Drawing.Point(12, 27);
+            this.FileListView.Name = "FileListView";
+            this.FileListView.Size = new System.Drawing.Size(346, 243);
+            this.FileListView.TabIndex = 1;
+            this.FileListView.UseCompatibleStateImageBehavior = false;
+            this.FileListView.DragEnter += new System.Windows.Forms.DragEventHandler(this.FileListView_DragEnter);
+            this.FileListView.DragOver += new System.Windows.Forms.DragEventHandler(this.FileListView_DragOver);
             // 
             // ToolBarMenuStrip
             // 
@@ -100,7 +103,7 @@ namespace Simple_Image_Converter
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(521, 279);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.FileListView);
             this.Controls.Add(this.ToolBarMenuStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.ToolBarMenuStrip;
@@ -116,7 +119,7 @@ namespace Simple_Image_Converter
         }
 
         #endregion
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView FileListView;
         private System.Windows.Forms.MenuStrip ToolBarMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem File;
         private System.Windows.Forms.ToolStripMenuItem Import;
