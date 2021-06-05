@@ -17,5 +17,14 @@ namespace Simple_Image_Converter
             InitializeComponent();
         }
 
+        private void Import_Click(object sender, EventArgs e)
+        {
+            ImportDialoge.ShowDialog();
+            ImportDialoge.Filter = "Image files (*.png, *.jpg, *.jpeg, *.jpe, *.jfif) | *.png; *.jpg; *.jpeg; *.jpe; *.jfif";
+        }
+
+        private void Help_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
