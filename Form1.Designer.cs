@@ -70,14 +70,14 @@ namespace Simple_Image_Converter
             // Import
             // 
             this.Import.Name = "Import";
-            this.Import.Size = new System.Drawing.Size(180, 22);
+            this.Import.Size = new System.Drawing.Size(116, 22);
             this.Import.Text = "Import";
             this.Import.Click += new System.EventHandler(this.Import_Click);
             // 
             // Options
             // 
             this.Options.Name = "Options";
-            this.Options.Size = new System.Drawing.Size(180, 22);
+            this.Options.Size = new System.Drawing.Size(116, 22);
             this.Options.Text = "Options";
             // 
             // Help
@@ -93,7 +93,7 @@ namespace Simple_Image_Converter
             this.ImportDialoge.Filter = "Image files (*.png, *.jpg, *.jpeg, *.jpe, *.jfif) | *.png; *.jpg; *.jpeg; *.jpe; " +
     "*.jfif";
             this.ImportDialoge.Multiselect = true;
-            this.ImportDialoge.Title = "Testing File Dialog";
+            this.ImportDialoge.Title = "Import Image Files";
             // 
             // Form1
             // 
