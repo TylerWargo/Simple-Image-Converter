@@ -20,7 +20,15 @@ namespace Simple_Image_Converter
 
         private void Import_Click(object sender, EventArgs e)
         {
-            ImportDialoge.ShowDialog();
+            DialogResult importResult = ImportDialoge.ShowDialog();
+            if (importResult == System.Windows.Forms.DialogResult.OK) 
+            {
+                string[] files = ImportDialoge.FileNames;
+                for (int i = 0; i < files.Length; i++) 
+                {
+                    MessageBox.Show(files[i].ToString());
+                }
+            }
         }
 
         private void Help_Click(object sender, EventArgs e)
