@@ -50,6 +50,7 @@ namespace Simple_Image_Converter
             this.FileListView.Size = new System.Drawing.Size(346, 243);
             this.FileListView.TabIndex = 1;
             this.FileListView.UseCompatibleStateImageBehavior = false;
+            this.FileListView.DragOver += new System.Windows.Forms.DragEventHandler(this.FileListView_DragOver);
             // 
             // ToolBarMenuStrip
             // 
@@ -101,9 +102,9 @@ namespace Simple_Image_Converter
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(365, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(364, 27);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 117);
+            this.pictureBox1.Size = new System.Drawing.Size(145, 117);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 

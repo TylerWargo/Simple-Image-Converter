@@ -40,9 +40,23 @@ namespace Simple_Image_Converter
             });
         }
 
+        private void DragHover(DragEventArgs e) 
+        {
+            if(e.Effect == System.Windows.Forms.DragDropEffects.None)
+            {
+                e.Effect = System.Windows.Forms.DragDropEffects.Copy;
+            }
+        }
+
         private void Form1_DragOver(object sender, DragEventArgs e)
         {
-            MessageBox.Show("Dragging over.");
+            //MessageBox.Show("Dragging over.");
+            DragHover(e);
+        }
+
+        private void FileListView_DragOver(object sender, DragEventArgs e)
+        {
+            DragHover(e);
         }
     }
 }
