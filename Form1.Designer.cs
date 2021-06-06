@@ -47,6 +47,7 @@ namespace Simple_Image_Converter
             // 
             this.FileListView.AllowDrop = true;
             this.FileListView.HideSelection = false;
+            this.FileListView.LargeImageList = this.FileImageList;
             this.FileListView.Location = new System.Drawing.Point(12, 27);
             this.FileListView.Name = "FileListView";
             this.FileListView.Size = new System.Drawing.Size(346, 243);
