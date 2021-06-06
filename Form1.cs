@@ -20,10 +20,13 @@ namespace Simple_Image_Converter
 
         private void Import_Click(object sender, EventArgs e)
         {
+            FileImageList.Images.Clear();
+            FileListView.Clear();
             DialogResult importResult = ImportDialoge.ShowDialog();
             if (importResult == System.Windows.Forms.DialogResult.OK) 
             {
-                string[] files = ImportDialoge.FileNames;
+                FileImageList.Images.Add(Image.FromFile(ImportDialoge.FileName));
+                FileListView.Items.Add(ImportDialoge.FileName, 0);
             }
         }
 

@@ -29,6 +29,7 @@ namespace Simple_Image_Converter
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.FileListView = new System.Windows.Forms.ListView();
             this.ToolBarMenuStrip = new System.Windows.Forms.MenuStrip();
             this.File = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,6 +38,7 @@ namespace Simple_Image_Converter
             this.Help = new System.Windows.Forms.ToolStripMenuItem();
             this.ImportDialoge = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.FileImageList = new System.Windows.Forms.ImageList(this.components);
             this.ToolBarMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -107,6 +109,12 @@ namespace Simple_Image_Converter
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // FileImageList
+            // 
+            this.FileImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.FileImageList.ImageSize = new System.Drawing.Size(16, 16);
+            this.FileImageList.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -140,6 +148,7 @@ namespace Simple_Image_Converter
         private System.Windows.Forms.OpenFileDialog ImportDialoge;
         private System.Windows.Forms.ToolStripMenuItem Options;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ImageList FileImageList;
     }
 }
 
