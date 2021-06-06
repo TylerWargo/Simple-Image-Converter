@@ -59,7 +59,7 @@ namespace Simple_Image_Converter
             // 
             // FileImageList
             // 
-            this.FileImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.FileImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
             this.FileImageList.ImageSize = new System.Drawing.Size(50, 50);
             this.FileImageList.TransparentColor = System.Drawing.Color.Transparent;
             // 
