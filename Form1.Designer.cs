@@ -39,10 +39,13 @@ namespace Simple_Image_Converter
             this.Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.Help = new System.Windows.Forms.ToolStripMenuItem();
             this.ImportDialoge = new System.Windows.Forms.OpenFileDialog();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PreviewPictureBox = new System.Windows.Forms.PictureBox();
             this.ClearButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.ToolBarMenuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PreviewPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // FileListView
@@ -118,14 +121,16 @@ namespace Simple_Image_Converter
             this.ImportDialoge.Multiselect = true;
             this.ImportDialoge.Title = "Import Image Files";
             // 
-            // pictureBox1
+            // PreviewPictureBox
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(364, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(145, 117);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.PreviewPictureBox.BackColor = System.Drawing.SystemColors.Window;
+            this.PreviewPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PreviewPictureBox.InitialImage = null;
+            this.PreviewPictureBox.Location = new System.Drawing.Point(364, 27);
+            this.PreviewPictureBox.Name = "PreviewPictureBox";
+            this.PreviewPictureBox.Size = new System.Drawing.Size(145, 117);
+            this.PreviewPictureBox.TabIndex = 4;
+            this.PreviewPictureBox.TabStop = false;
             // 
             // ClearButton
             // 
@@ -136,14 +141,42 @@ namespace Simple_Image_Converter
             this.ClearButton.Text = "Clear";
             this.ClearButton.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(364, 151);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 15);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "IMAGE DIR";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(364, 218);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(80, 23);
+            this.textBox1.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(450, 218);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(59, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Rename";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(521, 279);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ClearButton);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.PreviewPictureBox);
             this.Controls.Add(this.FileListView);
             this.Controls.Add(this.ToolBarMenuStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -155,7 +188,7 @@ namespace Simple_Image_Converter
             this.DragOver += new System.Windows.Forms.DragEventHandler(this.Form1_DragOver);
             this.ToolBarMenuStrip.ResumeLayout(false);
             this.ToolBarMenuStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PreviewPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,10 +202,13 @@ namespace Simple_Image_Converter
         private System.Windows.Forms.ToolStripMenuItem Help;
         private System.Windows.Forms.OpenFileDialog ImportDialoge;
         private System.Windows.Forms.ToolStripMenuItem Options;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PreviewPictureBox;
         private System.Windows.Forms.ImageList FileImageList;
         private System.Windows.Forms.ToolStripMenuItem Exit;
         private System.Windows.Forms.Button ClearButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
