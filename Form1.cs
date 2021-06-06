@@ -24,10 +24,6 @@ namespace Simple_Image_Converter
             if (importResult == System.Windows.Forms.DialogResult.OK) 
             {
                 string[] files = ImportDialoge.FileNames;
-                for (int i = 0; i < files.Length; i++) 
-                {
-                    MessageBox.Show(files[i].ToString());
-                }
             }
         }
 

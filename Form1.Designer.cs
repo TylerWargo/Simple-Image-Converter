@@ -93,7 +93,6 @@ namespace Simple_Image_Converter
             // 
             // ImportDialoge
             // 
-            this.ImportDialoge.FileName = "importFileDialogue";
             this.ImportDialoge.Filter = "Image files (*.png, *.jpg, *.jpeg, *.jpe, *.jfif) | *.png; *.jpg; *.jpeg; *.jpe; " +
     "*.jfif";
             this.ImportDialoge.Multiselect = true;
