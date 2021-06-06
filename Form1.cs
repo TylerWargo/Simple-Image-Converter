@@ -41,18 +41,9 @@ namespace Simple_Image_Converter
 
         }
 
-        private void FileListView_DragOver(object sender, DragEventArgs e)
+        private void Form1_DragOver(object sender, DragEventArgs e)
         {
-            base.OnDragOver(e);
-            if (e.Effect == System.Windows.Forms.DragDropEffects.None)
-            {
-                e.Effect = System.Windows.Forms.DragDropEffects.Copy;
-            }
-        }
-
-        private void FileListView_DragEnter(object sender, DragEventArgs e)
-        {
-
+            MessageBox.Show("Dragging over.");
         }
     }
 }

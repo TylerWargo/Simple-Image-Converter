@@ -48,8 +48,6 @@ namespace Simple_Image_Converter
             this.FileListView.Size = new System.Drawing.Size(346, 243);
             this.FileListView.TabIndex = 1;
             this.FileListView.UseCompatibleStateImageBehavior = false;
-            this.FileListView.DragEnter += new System.Windows.Forms.DragEventHandler(this.FileListView_DragEnter);
-            this.FileListView.DragOver += new System.Windows.Forms.DragEventHandler(this.FileListView_DragOver);
             // 
             // ToolBarMenuStrip
             // 
@@ -73,14 +71,14 @@ namespace Simple_Image_Converter
             // Import
             // 
             this.Import.Name = "Import";
-            this.Import.Size = new System.Drawing.Size(180, 22);
+            this.Import.Size = new System.Drawing.Size(116, 22);
             this.Import.Text = "Import";
             this.Import.Click += new System.EventHandler(this.Import_Click);
             // 
             // Options
             // 
             this.Options.Name = "Options";
-            this.Options.Size = new System.Drawing.Size(180, 22);
+            this.Options.Size = new System.Drawing.Size(116, 22);
             this.Options.Text = "Options";
             // 
             // Help
@@ -100,6 +98,7 @@ namespace Simple_Image_Converter
             // 
             // Form1
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(521, 279);
@@ -111,6 +110,7 @@ namespace Simple_Image_Converter
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Simple Image Converter";
+            this.DragOver += new System.Windows.Forms.DragEventHandler(this.Form1_DragOver);
             this.ToolBarMenuStrip.ResumeLayout(false);
             this.ToolBarMenuStrip.PerformLayout();
             this.ResumeLayout(false);
