@@ -36,9 +36,11 @@ namespace Simple_Image_Converter
             this.File = new System.Windows.Forms.ToolStripMenuItem();
             this.Import = new System.Windows.Forms.ToolStripMenuItem();
             this.Options = new System.Windows.Forms.ToolStripMenuItem();
+            this.Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.Help = new System.Windows.Forms.ToolStripMenuItem();
             this.ImportDialoge = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ClearButton = new System.Windows.Forms.Button();
             this.ToolBarMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -75,7 +77,8 @@ namespace Simple_Image_Converter
             // 
             this.File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Import,
-            this.Options});
+            this.Options,
+            this.Exit});
             this.File.Name = "File";
             this.File.Size = new System.Drawing.Size(37, 20);
             this.File.Text = "File";
@@ -92,6 +95,13 @@ namespace Simple_Image_Converter
             this.Options.Name = "Options";
             this.Options.Size = new System.Drawing.Size(116, 22);
             this.Options.Text = "Options";
+            // 
+            // Exit
+            // 
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(116, 22);
+            this.Exit.Text = "Exit";
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // Help
             // 
@@ -116,12 +126,22 @@ namespace Simple_Image_Converter
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // ClearButton
+            // 
+            this.ClearButton.Location = new System.Drawing.Point(364, 247);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(145, 23);
+            this.ClearButton.TabIndex = 5;
+            this.ClearButton.Text = "Clear";
+            this.ClearButton.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(521, 279);
+            this.Controls.Add(this.ClearButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.FileListView);
             this.Controls.Add(this.ToolBarMenuStrip);
@@ -150,6 +170,8 @@ namespace Simple_Image_Converter
         private System.Windows.Forms.ToolStripMenuItem Options;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ImageList FileImageList;
+        private System.Windows.Forms.ToolStripMenuItem Exit;
+        private System.Windows.Forms.Button ClearButton;
     }
 }
 
