@@ -31,6 +31,7 @@ namespace Simple_Image_Converter
         {
             this.components = new System.ComponentModel.Container();
             this.FileListView = new System.Windows.Forms.ListView();
+            this.FileImageList = new System.Windows.Forms.ImageList(this.components);
             this.ToolBarMenuStrip = new System.Windows.Forms.MenuStrip();
             this.File = new System.Windows.Forms.ToolStripMenuItem();
             this.Import = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,7 +39,6 @@ namespace Simple_Image_Converter
             this.Help = new System.Windows.Forms.ToolStripMenuItem();
             this.ImportDialoge = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.FileImageList = new System.Windows.Forms.ImageList(this.components);
             this.ToolBarMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +54,12 @@ namespace Simple_Image_Converter
             this.FileListView.TabIndex = 1;
             this.FileListView.UseCompatibleStateImageBehavior = false;
             this.FileListView.DragOver += new System.Windows.Forms.DragEventHandler(this.FileListView_DragOver);
+            // 
+            // FileImageList
+            // 
+            this.FileImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.FileImageList.ImageSize = new System.Drawing.Size(50, 50);
+            this.FileImageList.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // ToolBarMenuStrip
             // 
@@ -109,12 +115,6 @@ namespace Simple_Image_Converter
             this.pictureBox1.Size = new System.Drawing.Size(145, 117);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // FileImageList
-            // 
-            this.FileImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.FileImageList.ImageSize = new System.Drawing.Size(16, 16);
-            this.FileImageList.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // Form1
             // 
