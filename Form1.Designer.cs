@@ -36,7 +36,9 @@ namespace Simple_Image_Converter
             this.Options = new System.Windows.Forms.ToolStripMenuItem();
             this.Help = new System.Windows.Forms.ToolStripMenuItem();
             this.ImportDialoge = new System.Windows.Forms.OpenFileDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ToolBarMenuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // FileListView
@@ -96,12 +98,22 @@ namespace Simple_Image_Converter
             this.ImportDialoge.Multiselect = true;
             this.ImportDialoge.Title = "Import Image Files";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(365, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 117);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(521, 279);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.FileListView);
             this.Controls.Add(this.ToolBarMenuStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -113,6 +125,7 @@ namespace Simple_Image_Converter
             this.DragOver += new System.Windows.Forms.DragEventHandler(this.Form1_DragOver);
             this.ToolBarMenuStrip.ResumeLayout(false);
             this.ToolBarMenuStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,6 +139,7 @@ namespace Simple_Image_Converter
         private System.Windows.Forms.ToolStripMenuItem Help;
         private System.Windows.Forms.OpenFileDialog ImportDialoge;
         private System.Windows.Forms.ToolStripMenuItem Options;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -38,7 +38,6 @@ namespace Simple_Image_Converter
             { 
                 UseShellExecute = true 
             });
-
         }
 
         private void Form1_DragOver(object sender, DragEventArgs e)
