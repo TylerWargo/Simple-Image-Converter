@@ -40,12 +40,12 @@ namespace Simple_Image_Converter
             this.Help = new System.Windows.Forms.ToolStripMenuItem();
             this.ImportDialoge = new System.Windows.Forms.OpenFileDialog();
             this.PreviewPictureBox = new System.Windows.Forms.PictureBox();
-            this.ClearButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.ToolBarMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PreviewPictureBox)).BeginInit();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // FileListView
@@ -56,7 +56,7 @@ namespace Simple_Image_Converter
             this.FileListView.LargeImageList = this.FileImageList;
             this.FileListView.Location = new System.Drawing.Point(12, 27);
             this.FileListView.Name = "FileListView";
-            this.FileListView.Size = new System.Drawing.Size(346, 243);
+            this.FileListView.Size = new System.Drawing.Size(300, 300);
             this.FileListView.TabIndex = 1;
             this.FileListView.UseCompatibleStateImageBehavior = false;
             this.FileListView.DragOver += new System.Windows.Forms.DragEventHandler(this.FileListView_DragOver);
@@ -74,7 +74,7 @@ namespace Simple_Image_Converter
             this.Help});
             this.ToolBarMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.ToolBarMenuStrip.Name = "ToolBarMenuStrip";
-            this.ToolBarMenuStrip.Size = new System.Drawing.Size(521, 24);
+            this.ToolBarMenuStrip.Size = new System.Drawing.Size(520, 24);
             this.ToolBarMenuStrip.TabIndex = 2;
             // 
             // File
@@ -126,56 +126,49 @@ namespace Simple_Image_Converter
             this.PreviewPictureBox.BackColor = System.Drawing.SystemColors.Window;
             this.PreviewPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PreviewPictureBox.InitialImage = null;
-            this.PreviewPictureBox.Location = new System.Drawing.Point(364, 27);
+            this.PreviewPictureBox.Location = new System.Drawing.Point(318, 27);
             this.PreviewPictureBox.Name = "PreviewPictureBox";
-            this.PreviewPictureBox.Size = new System.Drawing.Size(145, 117);
+            this.PreviewPictureBox.Size = new System.Drawing.Size(191, 117);
             this.PreviewPictureBox.TabIndex = 4;
             this.PreviewPictureBox.TabStop = false;
             // 
-            // ClearButton
+            // tabControl1
             // 
-            this.ClearButton.Location = new System.Drawing.Point(364, 247);
-            this.ClearButton.Name = "ClearButton";
-            this.ClearButton.Size = new System.Drawing.Size(145, 23);
-            this.ClearButton.TabIndex = 5;
-            this.ClearButton.Text = "Clear";
-            this.ClearButton.UseVisualStyleBackColor = true;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(318, 150);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(190, 177);
+            this.tabControl1.TabIndex = 9;
             // 
-            // label1
+            // tabPage1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(364, 151);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 15);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "IMAGE DIR";
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(182, 149);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Settings";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // tabPage2
             // 
-            this.textBox1.Location = new System.Drawing.Point(364, 218);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(80, 23);
-            this.textBox1.TabIndex = 7;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(450, 218);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(59, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Rename";
-            this.button1.UseVisualStyleBackColor = true;
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(182, 149);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Manage";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(521, 279);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.ClearButton);
+            this.ClientSize = new System.Drawing.Size(520, 338);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.PreviewPictureBox);
             this.Controls.Add(this.FileListView);
             this.Controls.Add(this.ToolBarMenuStrip);
@@ -189,6 +182,7 @@ namespace Simple_Image_Converter
             this.ToolBarMenuStrip.ResumeLayout(false);
             this.ToolBarMenuStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PreviewPictureBox)).EndInit();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,10 +199,9 @@ namespace Simple_Image_Converter
         private System.Windows.Forms.PictureBox PreviewPictureBox;
         private System.Windows.Forms.ImageList FileImageList;
         private System.Windows.Forms.ToolStripMenuItem Exit;
-        private System.Windows.Forms.Button ClearButton;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
 
